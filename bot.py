@@ -2,6 +2,8 @@ import discord
 
 client = discord.Client()
 
+token = open("t.token")
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -39,4 +41,4 @@ class Expense:
 
         return embed
 
-client.run('NzYzMjc3ODU2ODMzOTI5MjY2.X31X5g.3qvyznwcCfjRN_h9Scjz4syHsNc')
+client.run(token.read(200))
